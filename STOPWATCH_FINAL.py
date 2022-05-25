@@ -17,6 +17,29 @@ def start():
         update()
         running= True
 
+def stop():
+    global running
+    if running:
+        stopwatch_label.after_cancel(update_time)
+        running= False
+        
+def reset():
+    global running
+    if running:
+        stopwatch_label.after_cancel(update_time)
+        running= False 
+        global hours, minutes, seconds,  lap_number 
+        hours, minutes, seconds,  lap_number  = 0,0,0,0
+        stopwatch_label.config(text="00:00:00")
+        display.delete('1.0', END)
+    
+    if not running:
+        stopwatch_label.after_cancel(update_time)
+        running= False 
+        hours, minutes, seconds, lap_number = 0,0,0,0
+        stopwatch_label.config(text="00:00:00")
+        display.delete('1.0', END)
+        
 root = Tk()
 root.title("Digital Clock/Stopwatch")
 root.geometry()
