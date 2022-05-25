@@ -40,6 +40,17 @@ def reset():
         stopwatch_label.config(text="00:00:00")
         display.delete('1.0', END)
         
+def update():
+    global hours, minutes, seconds
+    seconds+= 1
+    if seconds== 60:
+        minutes+= 1
+        seconds= 0
+        
+    if minutes== 60:
+        hours+= 1
+        minutes= 0
+        
 root = Tk()
 root.title("Digital Clock/Stopwatch")
 root.geometry()
