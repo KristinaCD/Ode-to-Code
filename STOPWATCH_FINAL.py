@@ -50,7 +50,15 @@ def update():
     if minutes== 60:
         hours+= 1
         minutes= 0
-        
+    
+    hours_string= f"{hours}" if hours > 24 else f"0{hours}"  
+    minutes_string= f"{minutes}" if minutes > 60 else f"0{minutes}"
+    seconds_string= f"0{seconds}" if seconds < 10 else f"{seconds}"
+    stopwatch_label.config(text= hours_string +":"+ minutes_string +":"+ seconds_string)
+    global update_time
+    update_time= stopwatch_label.after(1000, update)
+    
+    
 root = Tk()
 root.title("Digital Clock/Stopwatch")
 root.geometry()
