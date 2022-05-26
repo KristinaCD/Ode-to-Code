@@ -17,6 +17,19 @@ def start():
         update()
         running= True
 
+def lap():
+    global running, lap_number
+    lap_number += 1
+    time = stopwatch_label.cget("text")
+    temp = "Lap " + str(lap_number) + ": " + time + "\n"
+    display.insert(END, temp)
+    
+def resume():
+    global running
+    if not running:
+        update()
+        running= True
+        
 def stop():
     global running
     if running:
