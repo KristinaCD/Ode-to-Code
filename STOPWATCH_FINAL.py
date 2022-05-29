@@ -105,7 +105,7 @@ stopwatch_label.pack()
 start_button=Button(root,text="Start",height=4,width=6,font=("Arial",10,"bold"),bg="Green",fg="Black", command= start)
 start_button.pack(side=LEFT)
 
-lap_button=Button(root,text="Split/Lap",height=4,width=6,font=("Arial",10,"bold"),bg="Purple",fg="Black", command= lap)
+lap_button=Button(root,text="Split/Lap",height=4,width=7,font=("Arial",10,"bold"),bg="Purple",fg="Black", command= lap)
 lap_button.pack(side=LEFT)
 
 resume_button=Button(root,text="Resume",height=4,width=6,font=("Arial",10,"bold"),bg="Yellow green",fg="Black", command= resume)
