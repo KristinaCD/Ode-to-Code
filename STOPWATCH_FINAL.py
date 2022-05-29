@@ -102,25 +102,25 @@ Label(root,font=("Times New Roman",25,"bold"),text="Stopwatch",fg="black").pack(
 stopwatch_label=Label(root,text="00:00:00",fg="Black",font=("Times New Roman",40,"bold"))
 stopwatch_label.pack()
 
-start_button=Button(root,text="Start",height=4,width=6,font=("Arial",10,"bold"),bg="Green",fg="Black", command= start)
+start_button=Button(root,text="Start",height=4,width=7,font=("Arial",12,"bold"),bg="Green",fg="Black", command= start)
 start_button.pack(side=LEFT)
 
-lap_button=Button(root,text="Split/Lap",height=4,width=7,font=("Arial",10,"bold"),bg="Purple",fg="Black", command= lap)
+lap_button=Button(root,text="Split/Lap",height=4,width=7,font=("Arial",12,"bold"),bg="Purple",fg="Black", command= lap)
 lap_button.pack(side=LEFT)
 
-resume_button=Button(root,text="Resume",height=4,width=6,font=("Arial",10,"bold"),bg="Yellow green",fg="Black", command= resume)
+resume_button=Button(root,text="Resume",height=4,width=7,font=("Arial",12,"bold"),bg="Yellow green",fg="Black", command= resume)
 resume_button.pack(side=LEFT)
         
-stop_button=Button(root,text="Stop",height=4,width=6,font=("Arial",10,"bold"),bg="Red",fg="Black", command= stop)
+stop_button=Button(root,text="Stop",height=4,width=7,font=("Arial",12,"bold"),bg="Red",fg="Black", command= stop)
 stop_button.pack(side=LEFT)
 
-reset_button=Button(root,text="Reset",height=4,width=6,font=("Arial",10,"bold"),bg="Grey",fg="Black", command= reset)
+reset_button=Button(root,text="Reset",height=4,width=7,font=("Arial",12,"bold"),bg="Grey",fg="Black", command= reset)
 reset_button.pack(side=LEFT)
 
-exit_button=Button(root,text="Exit",height=4,width=6,font=("Arial",10,"bold"),bg="White",fg="Black", command= quit)
+exit_button=Button(root,text="Exit",height=4,width=7,font=("Arial",12,"bold"),bg="White",fg="Black", command= quit)
 exit_button.pack(side=LEFT)
 
-display = Text(root,height=5,width=30,font=("Arial",10,"bold"))
+display = Text(root,height=6,width=30,font=("Arial",12,"bold"))
 display.pack(side=LEFT)
 
 root.mainloop()
